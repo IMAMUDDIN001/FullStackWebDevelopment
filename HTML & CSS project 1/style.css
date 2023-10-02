@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Rose", cursive;
+}
+
+body {
+
+
+    /* display: flex; */
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bg_img.png');
+
+}
+
+nav {
+    padding-top: 30px;
+    padding-left: 50px;
+
+    display: flex;
+}
+
+nav img {
+    cursor: pointer
+}
+
+nav div ul {
+    font-family: 'Red Rose', cursive;
+    padding-left: 300px;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-weight: 5;
+}
+
+nav div ul li {
+    font-family: 'Red Rose', cursive;
+    color: #ffc233;
+
+}
+
+nav div ul li button {
+    margin-left: 300px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    color: #ffc233;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.main h1 {
+    /* font-weight: 700; */
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: #ff505f;
+    padding: 15px 40px;
+    margin-right: 10px;
+    border: none;
+}
+
+footer img {
+    padding-left: 1100px;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+
+}
