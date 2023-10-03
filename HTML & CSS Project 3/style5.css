@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 43px;
+    height: 94px;
+    background-color: #000;
+
+}
+.grow_list{
+    flex-grow: 1;
+
+}
+img{
+    width: 92px;
+    height: 32px;
+}
+.line{
+    width: 1px;
+    height: 50px;       
+    background-color: #fff;
+    margin-left: 3px;
+}
+.list_item{
+    display: flex;
+    align-items: center;
+    gap: 63px;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+   
+}
+.logo, .list_item{
+    cursor: pointer;
+}
+.buy_button button{
+    padding: 7px 28px;
+    background-color: #ba0cc5;
+    border-radius: 6px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    
+   
+}
+.hero_section{
+    background-image: url(assets/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 91.5vh;
+    text-align: center;
+}
+h1{
+    max-width: 846px;
+    margin: 0 auto;
+    font-style: normal;
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 110px;
+}
+p{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+    color: #ffffff;
+}
+.large1 button{
+    background-color: #ba0cc5;
+    border-radius: 11.2308px;
+  font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 29.9487px;
+    line-height: 45px;
+    color: #ffffff;
+    border: none;
+    padding: 14px 22px;
+    margin-top: 64px;
+    cursor: pointer;
+}
