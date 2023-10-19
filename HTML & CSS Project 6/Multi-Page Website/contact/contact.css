@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    background-color: #f0f4f5;
+    overflow: hidden;
+    margin: auto;
+}
+
+header {
+    display: flex;
+
+    align-items: center;
+
+
+}
+
+.logo {
+    margin: 25px 70px;
+    width: 150px;
+}
+
+nav {
+    height: 15vh;
+    display: flex;
+    padding-left: 650px;
+    align-items: center;
+
+
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    list-style: none;
+    margin-right: 50px;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    height: 85vh;
+    width: 1400px;
+    /* height: 500px; */
+    display: flex;
+
+
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 350px;
+    height: 420px;
+    box-shadow: 0 0 10px black;
+    /* gap: 15px; */
+}
+
+form h1 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    font-size: 18px;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    margin-bottom: 5px;
+   
+}
+
+input {
+    
+    padding: 10px 5px;
+    margin: 5px 10px;
+
+    /* margin-left: 10px; */
+    width: 300px;
+    height: 0px;
+    border-radius: 10px;
+    border: transparent;
+
+
+}
+
+textarea {
+    font-size: 12px;
+    padding: 5px 10px;
+    resize: none;
+    margin-left: 10px;
+    margin-top: 5px;
+
+    border: transparent;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+   
+}
+
+button {
+    margin: 30px 10px;
+    padding: 10px 150px;
+    font-weight: bold;
+    background-color: #20BC7E;
+    border: transparent;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+
+    justify-content: center;
+}

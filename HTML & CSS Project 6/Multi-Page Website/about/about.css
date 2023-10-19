@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+body {
+    max-width: 1440px;
+    background-color: #f0f4f5;
+    overflow: hidden;
+    margin: auto;
+  }
+
+header{
+    display: flex;
+   
+    align-items:center;
+  
+    
+}
+.logo{
+    margin: 25px 70px;
+    width: 150px;
+}
+nav{
+    height: 15vh;
+    display: flex;
+    padding-left: 650px;
+    align-items: center;
+    
+
+}
+nav ul{
+display: flex;
+    flex-direction: row;
+}
+nav ul li{
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    list-style: none;
+   margin-right: 50px;
+    
+}
+a{
+   
+    text-decoration: none;
+    color: black;
+}
+
+section{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+.main{
+    width: 50%;
+    text-align: center;
+
+}
+h1{
+    margin-bottom: 20px;
+    color: #20bc7e;
+    font-size: 32px;
+}
+p{
+    font-size: 18px;
+    font-weight: 400;
+}
+.box{
+    display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+.box-card{
+    width: 200px;
+    height: 100px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.box-card span{
+    font-size: 25px;
+    font-weight: 700;
+    color: #20bc7e;
+}
+
+.box-card p{
+    font-size: 20px;
+    font-weight: 500;
+}
