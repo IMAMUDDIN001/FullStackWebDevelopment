@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On keypress event</title>
+    <style>
+        
+#typesomething{
+    color: blue;
+}
+        #takeinput {
+            font-size: 25px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    <h1 id="typesomething"></h1>
+    <input type="text" id="takeinput" placeholder="type somthing...">
+</div>
+    <script>
+ 
+let inputBox = document.getElementById('takeinput') 
+let display = document.getElementById('typesomething')
+
+
+// // adding a keypress event listener to the inputbox
+inputBox.addEventListener('keypress', function(e){
+    typesomething.innerText ="you have Pressed " + e.key
+});
+
+
+    </script>
+</body>
+
+</html>

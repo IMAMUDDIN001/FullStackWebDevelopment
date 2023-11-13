@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On click event</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        button{
+            padding: 20px;
+            padding: 20px 60px;
+           margin-top: 300px;
+          margin-left: 600px;
+          font-size: 25px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 600;
+          border-radius: 20px;
+          background-color: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <Button id="btn">click here 👇</Button>
+    <script>
+        document.getElementById("btn").addEventListener('click', btn);
+            function btn() {
+                document.getElementById("btn").style.backgroundColor="red";
+                alert("You have clicked on the button 👍");
+                
+            }
+        
+    </script>
+</body>
+</html>

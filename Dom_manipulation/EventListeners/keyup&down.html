@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key UP and Down Event</title>
+    <!-- css code -->
+    <style>
+        .main{
+            height: 100vh;
+        }
+        #inner{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="inner">Press any key:)
+
+        </div>
+    </div>
+
+    <!-- Js code -->
+    <script>
+        // This code not perfect running.
+
+        // let container= document.getElementsByClassName("main");
+        // let display= document.getElementById("inner");
+
+        // document.addEventListener('keydown' ,'show');
+        // function show(e){
+        //     document.getElementById("inner").style.color="red";
+        //     document.getElementById("inner").innertext=e.key + "key down press"
+
+        // }
+        // document.addEventListener("keyup", 'shows');
+        // function shows(e){
+        //     document.getElementById.style.color="green";
+        //    document.getElementById("inner").display.innertext= e.key +"key up press"
+        // };
+
+
+let container = document.getElementsByClassName("main");
+let display = document.getElementById("inner");
+
+// adding a keydown event listener to the document
+document.addEventListener("keydown", function (e) {
+  display.style.color = "red";
+  display.innerText = e.key + " is keyDown";
+});
+
+// adding a keyup event listener to the document
+document.addEventListener("keyup", function (e) {
+  display.style.color = "green";
+  display.innerText = e.key + " is keyUp";
+});
+
+
+    </script>
+</body>
+</html>

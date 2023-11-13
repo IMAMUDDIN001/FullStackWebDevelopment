@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On dblclick event</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        button{
+            padding: 20px;
+            padding: 20px 60px;
+           margin-top: 300px;
+          margin-left: 500px;
+          font-size: 25px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 600;
+          border-radius: 20px;
+          background-color: gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <Button id="btn">Double click here 👇</Button>
+    <script>
+        document.getElementById("btn").addEventListener('dblclick', btn);
+            function btn() {
+                document.getElementById("btn").style.backgroundColor="green";
+                alert("You have double clicked on the button 👍");
+                
+            };
+        
+    </script>
+</body>
+</html>
