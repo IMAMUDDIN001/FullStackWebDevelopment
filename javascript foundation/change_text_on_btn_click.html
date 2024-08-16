@@ -1,0 +1,47 @@
+<!-- 18. Change Text on Button click. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Heading Text</title>
+    <style>
+        body {
+            background-color: #aeceab;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            color: black;
+            background-color:rgb(103, 90, 177);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">The most affordable learning platform</h1>
+    <button id="toggleButton">Toggle Text</button>
+
+    <script>
+       
+        const heading = document.getElementById('heading');
+        const button = document.getElementById('toggleButton');
+
+    
+        const toggleHeadingText = () => {
+            if (heading.textContent === 'The most affordable learning platform') {
+                heading.textContent = 'PW Skills';
+            } else {
+                heading.textContent = 'The most affordable learning platform';
+            }
+        };
+
+        // Add an event listener to the button to call the function on click
+        button.addEventListener('click', toggleHeadingText);
+    </script>
+</body>
+</html>

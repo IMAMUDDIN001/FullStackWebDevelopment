@@ -1,0 +1,97 @@
+<!-- 21. TODO App -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <style>
+        body {
+            background-color: #a4e9bb;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .remove-btn {
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .remove-btn:hover {
+            background: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="todoInput" placeholder="Enter a new task">
+    <button id="addButton">Add Task</button>
+    <ul id="todoList">
+        <!-- To-Do items will be added here -->
+    </ul>
+
+    <script>
+        // Get references to the input field, button, and list
+        const todoInput = document.getElementById('todoInput');
+        const addButton = document.getElementById('addButton');
+        const todoList = document.getElementById('todoList');
+
+        // Function to add a new task
+        const addTask = () => {
+            const taskText = todoInput.value.trim();
+
+            if (taskText !== '') {
+                // Create new list item
+                const newItem = document.createElement('li');
+                newItem.textContent = taskText;
+
+                // Create and append the remove button
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.className = 'remove-btn';
+                removeButton.onclick = () => {
+                    todoList.removeChild(newItem);
+                };
+
+                newItem.appendChild(removeButton);
+                todoList.appendChild(newItem);
+
+                // Clear the input field
+                todoInput.value = '';
+            } else {
+                alert('Please enter a task.');
+            }
+        };
+
+        // Add event listener to the button
+        addButton.addEventListener('click', addTask);
+
+        // Optional: Add support for pressing Enter to add tasks
+        todoInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                addTask();
+            }
+        });
+    </script>
+</body>
+</html>

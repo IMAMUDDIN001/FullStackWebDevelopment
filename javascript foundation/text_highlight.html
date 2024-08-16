@@ -1,0 +1,40 @@
+<!-- 24. Text Highlighting -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Highlighting</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="textParagraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, assumenda? In sit fugiat et amet provident dolorem, ipsam temporibus est cupiditate quam exercitationem suscipit quo velit ipsum natus voluptate consectetur molestiae sint sed delectus, obcaecati, eius corrupti assumenda. In labore et minus inventore, aspernatur reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Est architecto veritatis delectus sed! Officiis maxime, praesentium modi eum laboriosam placeat at. Accusantium molestiae ullam a perferendis. Dolor ipsam provident repellat harum quidem repudiandae veniam nam voluptates fugit, accusamus ut voluptatum exercitationem sed distinctio explicabo quae aspernatur? Eius aperiam culpa similique? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, odit, eveniet, enim inventore est earum nihil natus nam pariatur quasi repudiandae debitis laudantium esse. Ipsa modi dolor voluptatibus, delectus voluptates aspernatur, magni ea atque ex exercitationem doloremque doloribus harum nulla enim, cupiditate reiciendis animi! Dicta aliquid voluptates voluptatibus qui sed!
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl nec malesuada dictum, felis ligula vulputate quam, in venenatis enim urna ut lorem. Aliquam erat volutpat.
+    </p>
+
+    <script>
+        // Function to highlight words greater than 8 characters
+        const highlightLongWords = () => {
+            const paragraph = document.getElementById('textParagraph');
+            const words = paragraph.innerHTML.split(' ');
+            const highlightedWords = words.map(word => {
+                // Remove punctuation from the word for accurate length checking
+                const cleanWord = word.replace(/[.,!?;:]/g, '');
+                if (cleanWord.length > 8) {
+                    return `<span class="highlight">${word}</span>`;
+                }
+                return word;
+            });
+            paragraph.innerHTML = highlightedWords.join(' ');
+        };
+
+        // Call the function to highlight words when the page loads
+        highlightLongWords();
+    </script>
+</body>
+</html>

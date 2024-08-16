@@ -1,0 +1,74 @@
+<!-- //20. Dynamically Adding List Items to an Ordered List -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamically Adding List Items</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #message {
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>What You'll Learn</h1>
+    <ol id="itemList">
+        <!-- List items will be added here -->
+    </ol>
+    <button id="addButton">Add Next Item</button>
+    <p id="message"></p>
+
+    <script>
+        // Array of list items
+        const items = [
+            "Introduction to JavaScript",
+            "Understanding Variables",
+            "Functions and Scope",
+            "Working with Objects",
+            "Handling Events",
+            "DOM Manipulation",
+            "Asynchronous JavaScript",
+            "APIs and Fetch",
+            "Error Handling",
+            "Advanced JavaScript Concepts"
+        ];
+
+        let currentIndex = 0; // Index to keep track of the current item
+
+        const itemList = document.getElementById('itemList');
+        const addButton = document.getElementById('addButton');
+        const message = document.getElementById('message');
+
+        // Function to add a new item to the list
+        const addNextItem = () => {
+            if (currentIndex < items.length) {
+                const newItem = document.createElement('li');
+                newItem.textContent = items[currentIndex];
+                itemList.appendChild(newItem);
+                currentIndex++;
+                
+                // Clear the message if items are still available
+                message.textContent = '';
+            } else {
+                // Display message when all items are added
+                message.textContent = 'All items have been added!';
+            }
+        };
+
+        // Add event listener to the button
+        addButton.addEventListener('click', addNextItem);
+    </script>
+</body>
+</html>
